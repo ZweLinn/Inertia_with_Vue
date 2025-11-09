@@ -16,5 +16,6 @@ Route::get('dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('comments', CommentController::class);
+Route::post('comments', [CommentController::class , 'Store']);
 
 require __DIR__.'/settings.php';
